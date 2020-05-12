@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>My Vue App</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<div id="app">
+		<!--■ jsのnameの内容が入る。  -->
+		<!-- <p>Hello {{ name }}!</p> -->
+		<!--■ jsの式も使える  -->
+		<p>Hello {{ name.toUpperCase() }}!</p>
+		
+		<!--■ v-model > inputに入力した内容 > nameに反映  -->
+		<p><input type="text" v-model="name"></p>		
+	</div>	
+
+<!--■ Vue  -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!--■ javascript  -->
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

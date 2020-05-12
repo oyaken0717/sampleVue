@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>My Vue App</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<div id="app">
+		<h1>My Todos</h1>
+		<ul>
+		
+			<!--■ 「v-」:ディレクティブ  -->
+		
+			<!--■ 配列1こずつ出す  -->
+<!-- 		<li>{{todos[0]}}</li>
+			<li>{{todos[1]}}</li>	
+			<li>{{todos[2]}}</li> -->
+			<!--■ 配列1度に出す  -->
+			<li v-for="todo in todos">{{todo}}</li> 
+ 		</ul>
+ 		<form>
+ 			<input type="text">
+ 			<input type="submit" value="Add">
+ 		</form>
+	</div>	
+
+<!--■ Vue  -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!--■ javascript  -->
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
