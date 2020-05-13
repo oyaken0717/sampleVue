@@ -1,3 +1,5 @@
+<!--■ Vue メソッド 入力(メソッドを使って複数の処理)  -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,13 +14,12 @@
     <ul>
       <li v-for="todo in todos">{{ todo }}</li>
     </ul>
-<!--■5回からはjsの表示だけでなく、入力までやる。  -->
-<!--■ v-on: > 「@」 -->
-    <!-- <form v-on:submit="addItem"> -->
-<!--■ ■ いつも>コントローラー、Vue > jsのmethodsに行く！！！ -->
-    <form @submit.prevent="addItem">
+
+	<!--■ Java > コントローラー、Vue > jsのmethods  -->
     <!--■ 「.prevent」> submit > 遷移を「させない」 -->
-<!--■ v-model=valueの働き -->
+    <form @submit.prevent="addItem">
+
+	  <!--■ v-model=valueの働き -->
       <input type="text" v-model="newItem">
       <input type="submit" value="Add">
     </form>

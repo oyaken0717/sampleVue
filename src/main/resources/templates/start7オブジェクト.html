@@ -1,3 +1,6 @@
+<!--■ Vue オブジェクト化  -->
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,14 +11,13 @@
 <body>
 
   <div id="app" class="container">
-    <h1>My Todos</h1>
     <ul>
-      <li v-for="(todo, index) in todos">
-<!--■ jsでオブジェクト化todo(item)のtitle部分のみ抜き出す -->
-        {{ todo.title }}
+	  <!--■ jsでオブジェクト化todo(item)のtitle部分のみ抜き出す -->
+      <li v-for="(todo, index) in todos">{{ todo.title }}
         <span @click="deleteItem(index)" class="command">[x]</span>
       </li>
     </ul>
+    
     <form @submit.prevent="addItem">
       <input type="text" v-model="newItem">
       <input type="submit" value="Add">

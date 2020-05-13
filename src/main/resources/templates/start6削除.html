@@ -1,3 +1,5 @@
+<!--■  Vue 配列2(番号indexを付ける) 削除  -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,20 +10,13 @@
 <body>
 
   <div id="app" class="container">
-    <h1>My Todos</h1>
     <ul>
 	  <!--■① (◯◯,index)>要素にが渡される。  -->
-      <li v-for="(todo, index) in todos">
-        {{ todo }}
-	    <!--■② (index)で取り出せる。  -->
+      <li v-for="(todo, index) in todos">{{ todo }}
+	    <!--■② (index)で取り出せる。> jsのdeleteItemに行く。  -->
         <span @click="deleteItem(index)" class="command">[x]</span>
-	    <!--■③ jsのdeleteItemに行く。  -->
       </li>
     </ul>
-    <form @submit.prevent="addItem">
-      <input type="text" v-model="newItem">
-      <input type="submit" value="Add">
-    </form>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>

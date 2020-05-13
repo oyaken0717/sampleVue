@@ -16,27 +16,11 @@
         isDone: true
       }]
     },
-    methods: {
-      addItem: function() {
-        var item = {
-          title: this.newItem,
-          isDone: false
-        };
-        this.todos.push(item);
-        this.newItem = '';
-      },
-      deleteItem: function(index) {
-        if (confirm('are you sure?')) {
-          this.todos.splice(index, 1);
-        }
-      }
-    },
-//■ computed:キー
+//■ computed:キー 結果を保持したい(return)場合はcomputed / そうでない場合はmethods
     computed: {
       //■ remaining 名前
       remaining: function() {
-    	//■① filter(function(todo) > returnで条件に一致した要素だけを抽出する。
-    	//  https://www.sejuku.net/blog/21887
+    	//■① filter(function(todo) > returnで条件に一致した要素だけを抽出する。 https://www.sejuku.net/blog/21887
         var items = this.todos.filter(function(todo) {
           //■② 今回の場合:isDoneがtrueでないものを抽出する。
           return !todo.isDone;

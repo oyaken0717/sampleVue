@@ -1,3 +1,5 @@
+<!--■ Vue if-else show -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,27 +11,11 @@
 
   <div id="app" class="container">
     <h1>My Todos</h1>
-    <!-- <ul>
-      <li v-for="(todo, index) in todos">
-        <input type="checkbox" v-model="todo.isDone">
-        <span :class="{done: todo.isDone}">{{ todo.title }}</span>
-        <span @click="deleteItem(index)" class="command">[x]</span>
-      </li> -->
-<!--■ !todos.length > 空配列だった時 > メッセージを表示 -->
-      <!-- <li v-show="!todos.length">Nothing to do, yay!</li>
-    </ul> -->
-  <!-- <ul> -->
-<!--■ v-showではなく、v-ifを使う。 -->
+<!--■① v-show(ifの書き方違う版) !todos.length > 空配列だった時 > メッセージを表示 -->
+      <li v-show="!todos.length">Nothing to do, yay!</li>
 
-    <!-- <li v-if="todos.length" v-for="(todo, index) in todos">
-      <input type="checkbox" v-model="todo.isDone">
-      <span :class="{done: todo.isDone}">{{ todo.title }}</span>
-        <span @click="deleteItem(index)" class="command">[x]</span>
-      </li> -->
-
-      <!-- <li v-else>Nothing to do, yay!</li>
-    </ul> -->
-<!--■ ①配列が存在すれば、 -->
+<!--■② v-ifを使う。 -->
+<!--■ 配列が存在すれば、 -->
     <ul v-if="todos.length">
       <li v-for="(todo, index) in todos">
         <input type="checkbox" v-model="todo.isDone">
@@ -37,7 +23,7 @@
         <span @click="deleteItem(index)" class="command">[x]</span>
       </li>
     </ul>
-<!--■  ②配列が存在しなければ、-->
+<!--■ 配列が存在しなければ、-->
     <ul v-else>
       <li>Nothing to do, yay!</li>
     </ul>

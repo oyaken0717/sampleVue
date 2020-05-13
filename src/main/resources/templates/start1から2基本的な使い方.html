@@ -7,18 +7,19 @@
 </head>
 <body>
 	<div id="app">
-		<!--■ jsのnameの内容が入る。  -->
-		<!-- <p>Hello {{ name }}!</p> -->
-		<!--■ jsの式も使える  -->
-		<p>Hello {{ name.toUpperCase() }}!</p>
 		
+		<!--■③ 入力フォーム -->
 		<!--■ v-model > inputに入力した内容 > nameに反映  -->
 		<p><input type="text" v-model="name"></p>		
-	</div>	
 
-<!--■ Vue  -->
+		<!--■④ 表示フォーム -->
+		<!--■ jsのnameの内容が入る。{{ name }}  -->
+		<p>Hello {{ name.toUpperCase() }}</p>
+
+	</div>
+<!--■① Vue導入(jQueryと違う後に書いてOK)  -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<!--■ javascript  -->
+<!--■② javascript  -->
 <script th:src="@{/js/main.js}"></script>
 </body>
 </html>

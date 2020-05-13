@@ -12,10 +12,10 @@
       ]
     },
     methods: {
-      addItem: function() {
-        this.todos.push(this.newItem);
-        this.newItem = '';
-      },
+//      addItem: function() {
+//        this.todos.push(this.newItem);
+//        this.newItem = '';
+//      },
       deleteItem: function(index) {
         if (confirm('are you sure?')) {
           //■ スプライス(index番号の1個目)          

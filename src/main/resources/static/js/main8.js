@@ -24,11 +24,6 @@
         };
         this.todos.push(item);
         this.newItem = '';
-      },
-      deleteItem: function(index) {
-        if (confirm('are you sure?')) {
-          this.todos.splice(index, 1);
-        }
       }
     }
   });
